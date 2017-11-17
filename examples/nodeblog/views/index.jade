@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  if posts
+    each post, i in posts
+      h1= post.title
+      p #{post.category} by #{post.author} at #{moment(post.date).format("MM-DD-YYYY")}
+      a.more(href='/posts/show/#{post._id}') Read More
+  else
+    p.noposts There are no posts to display

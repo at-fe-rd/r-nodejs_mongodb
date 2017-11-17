@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Login
+  form(method='post', action='/users/login', enctype='multipart/form-data')
+    .form-group
+      label Username
+      input.form-control(name='username', type='text', placeholder='Enter Email')
+    .form-group
+      label Password
+      input.form-control(name='password', type='password', placeholder='Enter Password')
+    input.btn.btn-default(type='submit', value='Login')
